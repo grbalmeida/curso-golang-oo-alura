@@ -11,14 +11,20 @@ type ContaCorrente struct {
 
 func main() {
 	contaDoGuilherme := ContaCorrente{titular: "Guilherme", saldo: 125.50}
+	contaDoGuilherme2 := ContaCorrente{titular: "Guilherme", saldo: 125.50}
 	contaDaBruna := ContaCorrente{"Bruna", 222, 111222, 200}
-
-	fmt.Println(contaDoGuilherme)
-	fmt.Println(contaDaBruna)
+	contaDaBruna2 := ContaCorrente{"Bruna", 222, 111222, 200}
 
 	var contaDaCris *ContaCorrente
 	contaDaCris = new(ContaCorrente)
 	contaDaCris.titular = "Cris"
 
-	fmt.Println(contaDaCris)
+	var contaDaCris2 *ContaCorrente
+	contaDaCris2 = new(ContaCorrente)
+	contaDaCris2.titular = "Cris"
+
+	fmt.Println(contaDoGuilherme == contaDoGuilherme2)
+	fmt.Println(contaDaBruna == contaDaBruna2)
+	fmt.Println(contaDaCris == contaDaCris2)
+	fmt.Println(*contaDaCris, *contaDaCris2)
 }
