@@ -10,5 +10,9 @@ type ContaCorrente struct {
 }
 
 func main() {
-	fmt.Println(ContaCorrente{})
+	contaDoGuilherme := ContaCorrente{titular: "Guilherme", saldo: 125.50}
+	contaDaBruna := ContaCorrente{"Bruna", 222, 111222, 200}
+
+	fmt.Println(contaDoGuilherme)
+	fmt.Println(contaDaBruna)
 }
