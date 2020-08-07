@@ -1,7 +1,11 @@
 package contas
 
+import (
+	"github.com/grbalmeida/curso-golang-oo-alura/banco/clientes"
+)
+
 type ContaCorrente struct {
-	Titular       string
+	Titular       clientes.Titular
 	NumeroAgencia int
 	NumeroConta   int
 	Saldo         float64
